@@ -55,11 +55,11 @@ class War {
     }
 
     addViking(viking) {
-     this.vikingArmy;   
+     this.vikingArmy.push(viking);   
     }
 
     addSaxon(saxon) {
- this.saxonArmy;
+ this.saxonArmy.push(saxon);
     }
 
     vikingAttack(){
@@ -82,7 +82,13 @@ class War {
     }
 
     showStatus(){
-
+        
+            return this.saxonArmy.length === 0 ? `Vikings have won the war of the century!` : this.vikingArmy.length === 0
+            ?`Saxons have fought for their lives and survived another day...`
+            : `Vikings and Saxons are still in the thick of battle.`;
+    
+        
     }
-}
+    }
+
 
